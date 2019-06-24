@@ -1,0 +1,9 @@
+<p>login is here</p>
+
+
+<input [(ngModel)]= "firstName">
+<p>{{firstName}}</p>
+<p>{{lastName}}</p>
+
+<button (click)="logInUser()" >Login</button>
+<button [disabled]="!isLoggedIn">Sign Out</button>
