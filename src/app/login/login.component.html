@@ -1,9 +1,12 @@
-<p>login is here</p>
+<div *ngIf="!isLoggedIn">
+  <p>Login Here</p>
+  <input [(ngModel)]="firstName" />
+  <input [(ngModel)]="lastName" />
+  <p>{{ firstName }} {{ lastName }}</p>
+  <button (click)="logInUser()">Login</button>
+</div>
 
-
-<input [(ngModel)]= "firstName">
-<p>{{firstName}}</p>
-<p>{{lastName}}</p>
-
-<button (click)="logInUser()" >Login</button>
-<button [disabled]="!isLoggedIn">Sign Out</button>
+<div *ngIf="isLoggedIn">
+  <profile></profile>
+  <button [disabled]="!isLoggedIn" (click)="logOutUser()">Sign Out</button>
+</div>

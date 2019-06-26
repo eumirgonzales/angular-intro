@@ -1,8 +1,20 @@
-<div>profile works!</div>
-<input [(ngModel)] = "firstName"/>
-<input [(ngModel)] = "lastName"/>
-<p>{{firstName}}</p>
-<p>{{lastName}}</p>
-<button (click)="alertProfile()">
-    Alert profile
-</button>
+<div>
+  <p>Profile List</p>
+  <input [(ngModel)]="firstName" />
+  <input [(ngModel)]="lastName" />
+  <button (click)="addProfile(firstName, lastName)">
+    Add Profile
+  </button>
+
+  <p
+    *ngFor="let profile of profiles; index as i"
+    [ngStyle]="{ color: styleExp }"
+  >
+    {{ i }}
+    {{ profile }}
+  </p>
+</div>
+
+<!-- index as i" -->
+<!-- [ngStyle]="{'font-style': styleExp}" -->
+<!-- [ngStyle]="{ color: i >= 3 ? 'blue' : '' }" -->

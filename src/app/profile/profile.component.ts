@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector : 'profile',
-    templateUrl: './profile.component.html',
-    styleUrls: ['./profile.component.css']
+  selector: 'profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent{
-    firstName = '';
-    lastName = '';
+export class ProfileComponent {
+  firstName = '';
+  lastName = '';
+  profiles = [];
+  styleExp = 'red';
 
-    alertProfile(){
-        alert(this.firstName + ' ' + this.lastName);
-    }
+  addProfile(firstName, lastName) {
+    var fullName = firstName + ' ' + lastName;
+    this.profiles.push(fullName);
+  }
 }
