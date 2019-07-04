@@ -12,7 +12,7 @@ export class LoginComponent {
 
   logInUser() {
     this.isLoggedIn = true;
-    alert('My full name is: ' + this.firstName + ' ' + this.lastName);
+    // alert('My full name is: ' + this.firstName + ' ' + this.lastName);
   }
 
   logOutUser() {

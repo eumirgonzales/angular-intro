@@ -1,20 +1,24 @@
-<div>
+<!-- <div>
   <p>Profile List</p>
   <input [(ngModel)]="firstName" />
   <input [(ngModel)]="lastName" />
-  <button (click)="addProfile(firstName, lastName)">
+  <input [(ngModel)]="age" />
+  <button (click)="addProfile(firstName, lastName, age)">
     Add Profile
   </button>
 
-  <p
-    *ngFor="let profile of profiles; index as i"
-    [ngStyle]="{ color: styleExp }"
-  >
-    {{ i }}
-    {{ profile }}
-  </p>
-</div>
+  <div *ngFor="let profile of profiles">
+    <span>{{ profile.firstName }}</span>
+    <span>{{ profile.lastName }}</span>
+    <span [ngStyle]="{ color: profile.age >= 18 ? 'blue' : 'red' }">
+      {{ profile.age }}
+    </span>
+  </div>
+</div> -->
 
-<!-- index as i" -->
-<!-- [ngStyle]="{'font-style': styleExp}" -->
-<!-- [ngStyle]="{ color: i >= 3 ? 'blue' : '' }" -->
+<div>{{ profileList.firstName }}</div>
+<div>{{ profileList.lastName }}</div>
+<div>{{ profileList.age }}</div>
+<!-- <div [ngStyle]="{ color: profileList.age >= 18 ? 'blue' : 'red' }">
+  {{ profileList.age }}
+</div> -->

@@ -1,3 +1,28 @@
-<p>
-  profile-list works!
-</p>
+<div>
+  <p>Profile List</p>
+</div>
+
+<input type="text" [(ngModel)]="firstName" />
+<input type="text" [(ngModel)]="lastName" />
+<input type="text" [(ngModel)]="age" />
+
+<profile *ngFor="let profile of profileItems" [profileList]="profile">
+</profile>
+
+<app-work (workDisplay)="displayWork($event)"></app-work>
+<p>{{ job }}</p>
+<button (click)="addProfile(firstName, lastName, age)">Add</button>
+
+<!-- <button (click)="addProfile(firstName, lastName, age)">Add</button> -->
+<!-- <profile *ngFor="let profile of profileItems" [profileList]="profile"></profile> -->
+<!-- <div>
+  <p>Profile List</p>
+  <input [(ngModel)]="firstName" />
+  <input [(ngModel)]="lastName" />
+  <input [(ngModel)]="age" />
+  <button (click)="addProfile(firstName, lastName, age)">
+    Add Profile
+  </button>
+</div> -->
+
+<!-- <profile *ngFor="let profile of profileItems" [profileList]="profile"> </profile> -->

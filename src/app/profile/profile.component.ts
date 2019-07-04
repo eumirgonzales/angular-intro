@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'profile',
@@ -6,13 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  firstName = '';
-  lastName = '';
-  profiles = [];
-  styleExp = 'red';
+  @Input() profileList = {};
 
-  addProfile(firstName, lastName) {
-    var fullName = firstName + ' ' + lastName;
-    this.profiles.push(fullName);
-  }
+  // @Input() profileList = {};
+  // profiles = [];
+  // firstName = '';
+  // lastName = '';
+  // age = '';
+  // addProfile(savedFirstName, savedLastName, savedAge) {
+  //   var fullName = {
+  //     firstName: savedFirstName,
+  //     lastName: savedLastName,
+  //     age: savedAge
+  //   };
+  //   this.profiles.push(fullName);
+  // }
 }
+
+// @Input() profileList = {};

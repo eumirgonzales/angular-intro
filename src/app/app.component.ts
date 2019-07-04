@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app2';
-  
+  showAlert(event) {
+    console.log(event);
+    alert(event.firstName + ' ' + event.lastName);
+  }
 }
