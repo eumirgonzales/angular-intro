@@ -15,12 +15,12 @@ export class ProfileListComponent implements OnInit {
   @Output() onProfileAdded = new EventEmitter<{}>();
 
   profileItems = [];
-  firstName = '';
-  lastName = '';
-  age = '';
-  job = '';
+  // fullName = {};
+  // firstName = '';
+  // lastName = '';
+  // age = '';
+  // job = '';
 
-  constructor() {}
 
   addProfile(savedFirstName, savedLastName, savedAge) {
     var fullName = {
@@ -32,12 +32,13 @@ export class ProfileListComponent implements OnInit {
     this.onProfileAdded.emit(fullName);
   }
 
-  displayWork(event) {
-    console.log(event);
-    this.job = event.title;
-  }
+  // displayWork(event) {
+  //   console.log(event);
+  //   this.job = event.title;
+  // }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }
 
 // addProfile(savedFirstName, savedLastName, savedAge) {
