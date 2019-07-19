@@ -7,17 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
-  // constructor(private router:Router) { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  onLogOut(){
+  onLogOut() {
     //Perform log out operations
-    console.log("Log out user");
-    // this.router.navigate(['/']);
+    console.log('Log out user');
+    this.router.navigate(['/']);
   }
-
 }

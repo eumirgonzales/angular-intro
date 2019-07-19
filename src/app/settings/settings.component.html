@@ -1,5 +1,18 @@
-<p>
-  settings works!
-</p>
+<h1>
+  Settings Component
+</h1>
 
-<!-- <button (click)="onLogOut()">Log out</button> -->
+<div>
+  <a routerLink="child/1">
+    Open Child 1
+  </a>
+</div>
+<div>
+  <a routerLink="child/2">
+    Open Child 2
+  </a>
+</div>
+
+<router-outlet></router-outlet>
+<br />
+<div><button (click)="onLogOut()">Log Out</button></div>

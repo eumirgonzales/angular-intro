@@ -9,8 +9,9 @@ import { ProfileListComponent } from './profile-list/profile-list.component';
 import { WorkComponent } from './profile-list/work/work.component';
 // import { Route } from '@angular/compiler/src/core';
 import { SettingsComponent } from './settings/settings.component';
-import { Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { NewComponentComponent } from './new-component/new-component.component';
+import { ChildComponent } from './child-component/child-component.component';
 // import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 
 // const appRoutes : Routes = [
@@ -18,13 +19,20 @@ import { NewComponentComponent } from './new-component/new-component.component';
 //   {path: 'settings', component: SettingsComponent}
 // ];
 
-const appRoutes : Routes = [
-  {path : '', component : NewComponentComponent },
-  {path : 'settings', component : SettingsComponent },
-  {path : 'profile', component :  ProfileListComponent},
-]
-
-// http://localhost:4200/settings
+const appRoutes: Routes = [
+  { path: '', component: NewComponentComponent },
+  {
+    path: 'settings',
+    component: SettingsComponent,
+    children: [
+      {
+        path: 'child/:id',
+        component: ChildComponent
+      }
+    ]
+  },
+  { path: 'profile', component: ProfileListComponent }
+];
 
 @NgModule({
   declarations: [
@@ -34,13 +42,11 @@ const appRoutes : Routes = [
     ProfileListComponent,
     WorkComponent,
     SettingsComponent,
-    NewComponentComponent
+    NewComponentComponent,
+    ChildComponent
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
-
-
-// imports , RouterModule.forRoot(appRoutes)
