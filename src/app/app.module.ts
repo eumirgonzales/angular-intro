@@ -12,6 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NewComponentComponent } from './new-component/new-component.component';
 import { ChildComponent } from './child-component/child-component.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 
 // const appRoutes : Routes = [
@@ -45,8 +46,15 @@ const appRoutes: Routes = [
     NewComponentComponent,
     ChildComponent
   ],
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+//1 Import HTTP Client Module, and reference
+// HttpClientModule

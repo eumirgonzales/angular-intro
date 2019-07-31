@@ -4,3 +4,46 @@
   <div><a routerLink="settings">Settings</a></div>
 </div>
 <router-outlet></router-outlet>
+
+<!-- <button (click)="getRequest()">GET</button>
+<button (click)="deletePosts()">Delete Items</button>
+<button (click)="postRequest()">POST</button>
+
+<div *ngFor="let item of posts">
+  <h3>{{ item.title }}</h3>
+  <p>{{ item.body }}</p>
+  <hr />
+</div>
+
+<div>
+  <h3>{{ postData.title }}</h3>
+  <p>{{ postData.body }}</p>
+</div> -->
+
+<!-- 2 Setup get requests  -->
+<!-- 7 Display results of get request -->
+<div>
+  <p>HTTP REQUEST HERE</p>
+  <button (click)="getRequest()">GET</button>
+  <button (click)="postRequest(postTitle, body)">POST</button>
+
+  <h2>Get requests here</h2>
+  <button (click)="deletePosts()">Delete Items</button>
+  <div *ngFor="let post of posts">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+    <hr />
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]="postTitle" />
+    <input type="text" [(ngModel)]="body" />
+  </div>
+  <div>
+    <h3>{{ postData.title }}</h3>
+    <p>{{ postData.body }}</p>
+  </div>
+</div>
+
+<!-- <profile *ngFor="let profile of profileItems" [profileList]="profile">
+</profile> -->
